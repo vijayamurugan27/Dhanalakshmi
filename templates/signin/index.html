@@ -1,0 +1,23 @@
+<!-- {% extends 'base.html' %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+Hello {{ user }}
+
+<a href="{% url 'appname:logout' %}">Logout </a>
+
+{% endblock %} -->
+
+{% extends 'base.html' %}     
+
+{% block content %}  
+
+Home page.
+
+Hello {{ user }}
+
+<a href="{% url 'appname:logout' %}">Logout </a>
+
+
+{% endblock %}
