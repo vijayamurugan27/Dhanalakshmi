@@ -1,5 +1,4 @@
-
-## for user creation or register, sign-in and sign-out.
+/## for user creation or register, sign-in and sign-out.
 from django.shortcuts import render, redirect
 from appname.forms import CreateUserForm 
 
@@ -203,15 +202,15 @@ def product(request):
         if form.is_valid():
             form.save()
             img_obj = form.instance
-            return render(request, 'imageapp\product.html', {'form': form, 'img_obj': img_obj})
+            return render(request, 'imageapp/product.html', {'form': form, 'img_obj': img_obj})
     else:
         form = ProductForm()
-    return render(request, 'imageapp\product.html', {'form': form})
+    return render(request, 'imageapp/product.html', {'form': form})
 
 def products(request):
     all_products=Product.objects.all()
     context={'all_products':all_products}
-    return render(request, 'imageapp\products.html', context)
+    return render(request, 'imageapp/products.html', context)
 
 def order(request, id):
     obj = get_object_or_404(Product, id =id)
